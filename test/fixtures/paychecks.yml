@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2014-10-19 02:21:22
+  end_date: 2014-10-19 02:21:22
+  amount: 1
+  transfer_amount: 1
+  carry_over_amount: 1
+  previous_balance: 1
+  user_id: 1
+  plan_id: 
+
+two:
+  start_date: 2014-10-19 02:21:22
+  end_date: 2014-10-19 02:21:22
+  amount: 1
+  transfer_amount: 1
+  carry_over_amount: 1
+  previous_balance: 1
+  user_id: 1
+  plan_id: 
