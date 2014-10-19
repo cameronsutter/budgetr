@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  amount: 1
+  unused_amount: 1
+  paycheck_id: 
+
+two:
+  title: MyString
+  amount: 1
+  unused_amount: 1
+  paycheck_id: 
