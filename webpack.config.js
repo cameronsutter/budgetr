@@ -1,9 +1,8 @@
-var fs = require('fs');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const prodMode = process.env.NODE_ENV === 'production';
+// const prodMode = process.env.NODE_ENV === 'production';
 
 const root = __dirname;
 const distPath = path.resolve(root, 'dist');
@@ -24,30 +23,10 @@ const config = {
         include: path.resolve(root, 'src'),
 			},
 			{
-	      test: /\.less$/,
+	      test: /\.scss$/,
 	      use: [
 					'style-loader',
 	      	'css-loader',
-					{
-						loader: 'postcss-loader',
-						options: {
-							// Necessary for external CSS imports to work
-							// https://github.com/facebookincubator/create-react-app/issues/2677
-							ident: 'postcss',
-							plugins: () => [
-								require('postcss-flexbugs-fixes'),
-								require('autoprefixer')({
-									browsers: [
-										'>1%',
-										'last 4 versions',
-										'Firefox ESR',
-										'not ie < 9', // React doesn't support IE8 anyway
-									],
-									flexbox: 'no-2009',
-								}),
-							],
-						},
-					},
 					'sass-loader'
 				]
 	    }
@@ -69,3 +48,25 @@ const config = {
 };
 
 module.exports = config;
+
+
+// {
+// 	loader: 'postcss-loader',
+// 	options: {
+// 		// Necessary for external CSS imports to work
+// 		// https://github.com/facebookincubator/create-react-app/issues/2677
+// 		ident: 'postcss',
+// 		plugins: () => [
+// 			require('postcss-flexbugs-fixes'),
+// 			require('autoprefixer')({
+// 				browsers: [
+// 					'>1%',
+// 					'last 4 versions',
+// 					'Firefox ESR',
+// 					'not ie < 9', // React doesn't support IE8 anyway
+// 				],
+// 				flexbox: 'no-2009',
+// 			}),
+// 		],
+// 	},
+// },

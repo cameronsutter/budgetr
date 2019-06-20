@@ -1,141 +1,96 @@
-@import './vars.less';
+@import 'vars';
 
 body {
-  font-family: 'Helvetica, sans-serif';
-  font-family: 'Montserrat', sans-serif;
-  margin: 0px;
-  color: @neutral-0 !important;
+  // font-family: 'Helvetica', sans-serif;
+  // font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  // color: $gray-0 !important;
+}
+
+.money-text {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.money-text-lg {
+  @extend .money-text;
+  font-size: $font-5;
 }
 
 h1 {
   font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
-  .variable(font-size, --font-8, @font-8);
-  .variable(color, --neutral-1, @neutral-1);
-  text-align: center;
+  // font-size: $font-8;
+  color: $gray-1;
+  // text-align: center;
 }
 
 h2 {
   font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
-  .variable(font-size, --font-6, @font-6);
-  .variable(color, --neutral-1, @neutral-1);
+  // font-size: $font-6;
+  color: $gray-1;
 }
 
 h3 {
   font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
-  .variable(font-size, --font-4, @font-4);
-  .variable(color, --neutral-2, @neutral-2);
+  // font-size: $font-4;
+  color: $gray-2;
 }
 
-a {
-  .variable(color, --primary-4, @primary-4);
-}
-a:hover {
-  .variable(color, --neutral-4, @neutral-4);
-}
-a:visited {
-  .variable(color, --primary-2, @primary-2);
+h4 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 400;
+  // font-size: $font-4;
+  color: $gray-2;
 }
 
-.attribution {
-  .variable(font-size, --font-1, @font-1);
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 255px;
-  text-align: center;
-  p {
-    margin: 0;
-  }
-  div {
-    width: 150px;
-    background-color: hsl(16, 94%, 61%);
-    border-radius: 4px;
+.main {
+  .header {
     display: flex;
-    justify-content: center;
-    padding: 5px 0;
-    height: 45px;
-    margin: auto;
-  }
-}
-
-.palettes {
-  .variable(padding, --spacing-5, @spacing-5);
-  .variable(padding-bottom, --spacing-3, @spacing-3);
-  .variable(padding-left, --spacing-7, @spacing-7);
-  max-width: 1300px;
-
-  h2 {
-    text-align: center;
-    position: sticky;
-    top: 0;
     background-color: white;
+    top: 0;
+    z-index: 100;
   }
-}
-
-.palette__container {
-  display: flex;
-  justify-content: space-around;
-  .variable(padding-bottom, --spacing-4, @spacing-4);
-  h2 {
-    text-align: left;
-  }
-}
-
-.off-canvas.off-canvas-sidebar-show {
-  height: 100vh;
-}
-.off-canvas .off-canvas-content {
-  padding: 0;
-  overflow: scroll;
-}
-
-#the-sidebar {
-  .variable(padding, --spacing-4, @spacing-4);
-  .variable(background-color, --neutral-9, @neutral-9);
-  .variable(color, --neutral-0, @neutral-0);
-  width: 255px;
-  h1 {
-    .variable(font-size, --font-6, @font-6);
-  }
-  h2 {
-    .variable(font-size, --font-5, @font-5);
-  }
-  h3 {
-    .variable(font-size, --font-3, @font-3);
-  }
-  
-  .btn-primary {
-    .variable(font-size, --font-3, @font-3);
-    .variable(background-color, --primary-4, @primary-4);
-    .variable(border-color, --primary-4, @primary-4);
-    svg {
-      width: 30px;
-      vertical-align: middle;
-      transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-      .primary {
-        .variable(fill, --primary-7, @primary-7);
-      }
-      .secondary {
-        fill: white;
+  .content {
+    padding: $spacing-4;
+    .default-action-buttons {
+      margin-bottom: $spacing-5;
+      .btn {
+        padding: $spacing-4;
+        height: auto;
       }
     }
   }
-  .btn-primary:hover {
-    .variable(background-color, --primary-5, @primary-5);
+}
+
+.btn.btn-secondary {
+  @include button-outline-variant($support-5);
+}
+.btn.btn-warning-4 {
+  @include button-outline-variant($warning-3);
+}
+.btn.btn-success-outline {
+  @include button-outline-variant($success-5);
+}
+
+#the-sidebar {
+  padding: $spacing-4;
+  background-color: $gray-9;
+  color: $gray-0;
+  width: 255px;
+  h1 {
+    font-size: $font-6;
+  }
+  h2 {
+    font-size: $font-5;
+  }
+  h3 {
+    font-size: $font-3;
   }
 }
 
-.donate {
-  .variable(margin-top, --spacing-4, @spacing-4);
-  .btn {
-    .variable(border-color, --primary-4, @primary-4);
-    .variable(color, --primary-4, @primary-4);
-  }
-}
-
-.hidden {
-  display: none;
+.gray-border {
+  border: 2px solid $gray-7;
 }

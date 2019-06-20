@@ -1,0 +1,46 @@
+@import 'vars';
+  
+.calendar-date.calendar-range.range-start {
+  &::before {
+    background-color: $support-7;
+  }
+  &.active::before {
+    background-color: $support-6;
+  }
+  .date-item {
+    color: $primary-2;
+    background-color: $primary-7;
+    border-color: $primary-7;
+  }
+}
+
+.calendar-date.calendar-range.range-end {
+  &::before {
+    background-color: $support-7;
+  }
+  &.active::before {
+    background-color: $support-6;
+  }
+  .date-item {
+    color: $primary-1;
+    background-color: $primary-6;
+    border-color: $primary-6;
+  }
+}
+
+.calendar-date.calendar-range {
+  .date-item {
+    color: $support-3;
+  }
+  &::before {
+    background-color: $support-7;
+  }
+  &.active {
+    .date-item {
+      color: $support-1;
+    }
+    &::before {
+      background-color: $support-6;
+    }
+  }
+}

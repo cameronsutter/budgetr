@@ -1,0 +1,78 @@
+{
+  "userId": "",
+  "currentPayPeriods": [
+    {
+      "id": 1,
+      "income": [
+        {
+          "id": 1,
+          "name": "",
+          "amount": 123
+        }
+      ],
+      "expenses": [
+        {
+          "id": 1,
+          "name": "",
+          "amount": 123,
+          "date": 123456,
+          "bucketId": 1
+        }
+      ],
+      "buckets": [
+        {
+          "id": 1,
+          "name": "",
+          "total": 123,
+          "current": 111
+        }
+      ]
+    }
+  ],
+  "payPeriodTemplates": [
+    {
+      "id": 1,
+      "start": 15,
+      "end": 31,
+      "active": true,
+      "income": [
+        {
+          "id": 1,
+          "name": "",
+          "amount": 123
+        }
+      ],
+      "expenses": [
+        {
+          "id": 1,
+          "name": "",
+          "amount": 123,
+          "bucketId": 1
+        }
+      ],
+      "buckets": [
+        {
+          "id": 1,
+          "name": "",
+          "amount": 123
+        }
+      ]
+    }
+  ],
+  "savingsBuckets": [
+    {
+      "id": 1,
+      "name": "",
+      "amount": ""
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "date": 123456,
+      "from": "x.y.z",
+      "to": "a.b.c",
+      "amount": 123
+    }
+  ]
+}

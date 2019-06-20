@@ -1,3 +1,3 @@
-* ask RefactoringUI to be an affiliate
+* override margin-variants & padding-variants to use $spacing-x variables
+* continue with MVP
 * fix the collapsed menu button
-* a nice color: hsl(182, 70%, 70%)

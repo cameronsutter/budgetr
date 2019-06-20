@@ -1,0 +1,331 @@
+/* neutral colors */
+.neutral-0 {
+  color: hsl(42, 15%, 13%);
+}
+
+.neutral-1 {
+  color: hsl(40, 13%, 23%);
+}
+
+.neutral-2 {
+  color: hsl(37, 11%, 28%);
+}
+
+.neutral-3 {
+  color: hsl(41, 9%, 35%);
+}
+
+.neutral-4 {
+  color: hsl(41, 8%, 48%);
+}
+
+.neutral-5 {
+  color: hsl(41, 8%, 61%);
+}
+
+.neutral-6 {
+  color: hsl(39, 11%, 69%);
+}
+
+.neutral-7 {
+  color: hsl(40, 15%, 80%);
+}
+
+.neutral-8 {
+  color: hsl(43, 13%, 90%);
+}
+
+.neutral-9 {
+  color: hsl(40, 23%, 97%);
+}
+
+/* primary colors */
+.primary-0 {
+  color: hsl(6, 96%, 26%);
+}
+
+.primary-1 {
+  color: hsl(8, 92%, 35%);
+}
+
+.primary-2 {
+  color: hsl(10, 93%, 40%);
+}
+
+.primary-3 {
+  color: hsl(12, 86%, 47%);
+}
+
+.primary-4 {
+  color: hsl(14, 89%, 55%);
+}
+
+.primary-5 {
+  color: hsl(16, 94%, 61%);
+}
+
+.primary-6 {
+  color: hsl(18, 100%, 70%);
+}
+
+.primary-7 {
+  color: hsl(20, 100%, 77%);
+}
+
+.primary-8 {
+  color: hsl(22, 100%, 85%);
+}
+
+.primary-9 {
+  color: hsl(24, 100%, 93%);
+}
+
+.success-0 {
+  color: hsl(125, 97%, 14%);
+}
+
+/* success colors */
+.success-1 {
+  color: hsl(125, 86%, 20%);
+}
+
+.success-2 {
+  color: hsl(125, 79%, 26%);
+}
+
+.success-3 {
+  color: hsl(122, 80%, 29%);
+}
+
+.success-4 {
+  color: hsl(122, 73%, 35%);
+}
+
+.success-5 {
+  color: hsl(123, 57%, 45%);
+}
+
+.success-6 {
+  color: hsl(123, 53%, 55%);
+}
+
+.success-7 {
+  color: hsl(124, 63%, 74%);
+}
+
+.success-8 {
+  color: hsl(127, 65%, 85%);
+}
+
+.success-9 {
+  color: hsl(125, 65%, 93%);
+}
+
+/* error colors */
+.error-0 {
+  color: hsl(348, 94%, 20%);
+}
+
+.error-1 {
+  color: hsl(350, 94%, 28%);
+}
+
+.error-2 {
+  color: hsl(352, 90%, 35%);
+}
+
+.error-3 {
+  color: hsl(354, 85%, 44%);
+}
+
+.error-4 {
+  color: hsl(356, 75%, 53%);
+}
+
+.error-5 {
+  color: hsl(360, 83%, 62%);
+}
+
+.error-6 {
+  color: hsl(360, 91%, 69%);
+}
+
+.error-7 {
+  color: hsl(360, 100%, 80%);
+}
+
+.error-8 {
+  color: hsl(360, 100%, 87%);
+}
+
+.error-9 {
+  color: hsl(360, 100%, 95%);
+}
+
+/* warning colors */
+.warning-0 {
+  color: hsl(15, 86%, 30%);
+}
+
+.warning-1 {
+  color: hsl(22, 82%, 39%);
+}
+
+.warning-2 {
+  color: hsl(29, 80%, 44%);
+}
+
+.warning-3 {
+  color: hsl(36, 77%, 49%);
+}
+
+.warning-4 {
+  color: hsl(42, 87%, 55%);
+}
+
+.warning-5 {
+  color: hsl(44, 92%, 63%);
+}
+
+.warning-6 {
+  color: hsl(48, 94%, 68%);
+}
+
+.warning-7 {
+  color: hsl(48, 95%, 76%);
+}
+
+.warning-8 {
+  color: hsl(48, 100%, 88%);
+}
+
+.warning-9 {
+  color: hsl(49, 100%, 96%);
+}
+
+/* support colors */
+.support-0 {
+  color: hsl(234, 90%, 25%);
+}
+
+.support-1 {
+  color: hsl(232, 86%, 32%);
+}
+
+.support-2 {
+  color: hsl(230, 80%, 38%);
+}
+
+.support-3 {
+  color: hsl(228, 74%, 43%);
+}
+
+.support-4 {
+  color: hsl(223, 71%, 47%);
+}
+
+.support-5 {
+  color: hsl(224, 69%, 54%);
+}
+
+.support-6 {
+  color: hsl(222, 81%, 65%);
+}
+
+.support-7 {
+  color: hsl(219, 95%, 76%);
+}
+
+.support-8 {
+  color: hsl(216, 100%, 85%);
+}
+
+.support-9 {
+  color: hsl(216, 100%, 93%);
+}
+
+/* font sizes */
+.font-0 {
+  font-size: 12px;
+}
+
+.font-1 {
+  font-size: 14px;
+}
+
+.font-2 {
+  font-size: 16px;
+}
+
+.font-3 {
+  font-size: 18px;
+}
+
+.font-4 {
+  font-size: 20px;
+}
+
+.font-5 {
+  font-size: 24px;
+}
+
+.font-6 {
+  font-size: 30px;
+}
+
+.font-7 {
+  font-size: 36px;
+}
+
+.font-8 {
+  font-size: 48px;
+}
+
+.font-9 {
+  font-size: 60px;
+}
+
+.font-xl {
+  font-size: 72px;
+}
+
+/* spacing sizes */
+.spacing-0 {
+  margin: 2px;
+}
+
+.spacing-1 {
+  margin: 4px;
+}
+
+.spacing-2 {
+  margin: 8px;
+}
+
+.spacing-3 {
+  margin: 12px;
+}
+
+.spacing-4 {
+  margin: 16px;
+}
+
+.spacing-5 {
+  margin: 24px;
+}
+
+.spacing-6 {
+  margin: 32px;
+}
+
+.spacing-7 {
+  margin: 48px;
+}
+
+.spacing-8 {
+  margin: 64px;
+}
+
+.spacing-9 {
+  margin: 96px;
+}

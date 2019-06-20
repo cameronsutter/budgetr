@@ -1,0 +1,31 @@
+@import 'vars';
+
+.icon-money {
+  .primary {
+    fill: $success-7;
+  }
+  .secondary {
+    fill: $success-5;
+  }
+}
+
+.icon-dollar-sign {
+  .primary {
+    fill: $success-7;
+  }
+  .secondary {
+    fill: $success-2;
+  }
+}
+
+.icon-add {
+  .secondary {
+    fill: $success-2;
+  }
+}
+
+.icon-remove {
+  .secondary {
+    fill: $warning-0;
+  }
+}

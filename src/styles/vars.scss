@@ -1,7 +1,230 @@
-// Example of project-name.scss
-// Define variables to override default ones
-$primary-color: #2e5bec;
-$dark-color: #3e396b;
+// //////
+// colors
+// //////
+
+// warm gray
+
+$gray-0: hsl(42, 15%, 13%);
+$gray-1: hsl(40, 13%, 23%);
+$gray-2: hsl(37, 11%, 28%);
+$gray-3: hsl(41, 9%, 35%);
+$gray-4: hsl(41, 8%, 48%);
+$gray-5: hsl(41, 8%, 61%);
+$gray-6: hsl(39, 11%, 69%);
+$gray-7: hsl(40, 15%, 80%);
+$gray-8: hsl(43, 13%, 90%);
+$gray-9: hsl(40, 23%, 97%);
+
+// cool gray
+// $gray-0: hsl(210, 24%, 16%);
+// $gray-1: hsl(209, 20%, 25%);
+// $gray-2: hsl(209, 18%, 30%);
+// $gray-3: hsl(209, 14%, 37%);
+// $gray-4: hsl(211, 12%, 43%);
+// $gray-5: hsl(211, 10%, 53%);
+// $gray-6: hsl(211, 13%, 65%);
+// $gray-7: hsl(210, 16%, 82%);
+// $gray-8: hsl(214, 15%, 91%);
+// $gray-9: hsl(216, 33%, 97%);
+
+// primary
+
+// teal
+// $primary-0: hsl(176, 100%, 13%);
+// $primary-1: hsl(172, 98%, 20%);
+// $primary-2: hsl(172, 94%, 26%);
+// $primary-3: hsl(170, 91%, 32%);
+// $primary-4: hsl(168, 78%, 41%);
+// $primary-5: hsl(166, 64%, 49%);
+// $primary-6: hsl(164, 70%, 63%);
+// $primary-7: hsl(162, 73%, 74%);
+// $primary-8: hsl(163, 75%, 87%);
+// $primary-9: hsl(165, 67%, 96%);
+
+// indigo
+// $primary-0: hsl(234, 90%, 25%);
+// $primary-1: hsl(232, 86%, 32%);
+// $primary-2: hsl(230, 80%, 38%);
+// $primary-3: hsl(228, 74%, 43%);
+// $primary-4: hsl(223, 71%, 47%);
+// $primary-5: hsl(224, 69%, 54%);
+// $primary-6: hsl(222, 81%, 65%);
+// $primary-7: hsl(219, 95%, 76%);
+// $primary-8: hsl(216, 100%, 85%);
+// $primary-9: hsl(216, 100%, 93%);
+
+// orange
+$primary-0: hsl(6, 96%, 26%);
+$primary-1: hsl(8, 92%, 35%);
+$primary-2: hsl(10, 93%, 40%);
+$primary-3: hsl(12, 86%, 47%);
+$primary-4: hsl(14, 89%, 55%);
+$primary-5: hsl(16, 94%, 61%);
+$primary-6: hsl(18, 100%, 70%);
+$primary-7: hsl(20, 100%, 77%);
+$primary-8: hsl(22, 100%, 85%);
+$primary-9: hsl(24, 100%, 93%);
+
+// cyan
+// $cyan-0: hsl(188, 91%, 23%);
+// $cyan-1: hsl(186, 91%, 29%);
+// $cyan-2: hsl(184, 90%, 34%);
+// $cyan-3: hsl(182, 85%, 39%);
+// $cyan-4: hsl(180, 77%, 47%);
+// $cyan-5: hsl(178, 78%, 57%);
+// $cyan-6: hsl(176, 87%, 67%);
+// $cyan-7: hsl(174, 96%, 78%);
+// $cyan-8: hsl(172, 97%, 88%);
+// $cyan-9: hsl(171, 82%, 94%);
+
+// teal
+// $cyan-0: hsl(176, 100%, 13%);
+// $cyan-1: hsl(172, 98%, 20%);
+// $cyan-2: hsl(172, 94%, 26%);
+// $cyan-3: hsl(170, 91%, 32%);
+// $cyan-4: hsl(168, 78%, 41%);
+// $cyan-5: hsl(166, 64%, 49%);
+// $cyan-6: hsl(164, 70%, 63%);
+// $cyan-7: hsl(162, 73%, 74%);
+// $cyan-8: hsl(163, 75%, 87%);
+// $cyan-9: hsl(165, 67%, 96%);
+
+// indigo
+$support-0: hsl(234, 90%, 25%);
+$support-1: hsl(232, 86%, 32%);
+$support-2: hsl(230, 80%, 38%);
+$support-3: hsl(228, 74%, 43%);
+$support-4: hsl(223, 71%, 47%);
+$support-5: hsl(224, 69%, 54%);
+$support-6: hsl(222, 81%, 65%);
+$support-7: hsl(219, 95%, 76%);
+$support-8: hsl(216, 100%, 85%);
+$support-9: hsl(216, 100%, 93%);
+
+
+// success
+$success-0: hsl(125, 97%, 14%);
+$success-1: hsl(125, 86%, 20%);
+$success-2: hsl(125, 79%, 26%);
+$success-3: hsl(122, 80%, 29%);
+$success-4: hsl(122, 73%, 35%);
+$success-5: hsl(123, 57%, 45%);
+$success-6: hsl(123, 53%, 55%);
+$success-7: hsl(124, 63%, 74%);
+$success-8: hsl(127, 65%, 85%);
+$success-9: hsl(125, 65%, 93%);
+
+
+// error
+$error-0: hsl(348, 94%, 20%);
+$error-1: hsl(350, 94%, 28%);
+$error-2: hsl(352, 90%, 35%);
+$error-3: hsl(354, 85%, 44%);
+$error-4: hsl(356, 75%, 53%);
+$error-5: hsl(360, 83%, 62%);
+$error-6: hsl(360, 91%, 69%);
+$error-7: hsl(360, 100%, 80%);
+$error-8: hsl(360, 100%, 87%);
+$error-9: hsl(360, 100%, 95%);
+
+
+// warning
+$warning-0: hsl(15, 86%, 30%);
+$warning-1: hsl(22, 82%, 39%);
+$warning-2: hsl(29, 80%, 44%);
+$warning-3: hsl(36, 77%, 49%);
+$warning-4: hsl(42, 87%, 55%);
+$warning-5: hsl(44, 92%, 63%);
+$warning-6: hsl(48, 94%, 68%);
+$warning-7: hsl(48, 95%, 76%);
+$warning-8: hsl(48, 100%, 88%);
+$warning-9: hsl(49, 100%, 96%);
+
+
+
+// //////
+// font size
+// //////
+
+$font-0: 12px;
+$font-1: 14px;
+$font-2: 16px;
+$font-3: 18px;
+$font-4: 20px;
+$font-5: 24px;
+$font-6: 30px;
+$font-7: 36px;
+$font-8: 48px;
+$font-9: 60px;
+$font-99: 72px;
+
+// //////
+// spacing
+// //////
+
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 24px;
+$spacing-6: 32px;
+$spacing-7: 48px;
+$spacing-8: 64px;
+$spacing-9: 96px;
+
+// ////////////// //
+//  Spectre vars  //
+// ////////////// //
+
+
+// Core colors
+$primary-color: $primary-5;
+$primary-color-dark: $primary-3;
+$primary-color-light: $primary-7;
+$secondary-color: $support-5;
+$secondary-color-dark: $primary-3;
+$secondary-color-light: $support-7;
+
+// Gray colors
+$dark-color: $gray-0;
+$light-color: $gray-9;
+$gray-color: $gray-5;
+$gray-color-dark: $gray-3;
+$gray-color-light: $gray-7;
+
+$border-color: $gray-7;
+$border-color-dark: $gray-6;
+$border-color-light: $gray-8;
+$bg-color: $gray-9;
+$bg-color-dark: $gray-8;
+$bg-color-light: white;
+
+// Control colors
+$success-color: $success-5;
+$warning-color: $warning-5;
+$error-color: $error-5;
+
+// Other colors
+$highlight-color: $warning-9;
+$body-bg: $gray-9;
+$body-font-color: $gray-0;
+$link-color: $primary-5;
+$link-color-dark: $primary-3;
+$link-color-light: $primary-7;
+
+// Others
+$base-font-family: 'IBM Plex Sans', 'Helvetica', sans-serif;
+$mono-font-family: 'IBM Plex Mono', monospace;
 
 // Import full Spectre source code
 @import "node_modules/spectre.css/src/spectre";
+@import "node_modules/spectre.css/src/spectre-icons";
+@import "node_modules/spectre.css/src/spectre-exp";
+
+@include margin-variant(3, $unit-3);
+@include margin-variant(4, $unit-4);
+@include margin-variant(5, $unit-5);
+
+@include padding-variant(3, $unit-3);
+@include padding-variant(4, $unit-4);
+@include padding-variant(5, $unit-5);
