@@ -49,26 +49,36 @@ export default class BudgetTemplate extends React.Component {
   }
 
   calculateBuckets (period) {
-    let buckets = period.buckets
     let balance = period.income.reduce((acc, inc) => {
       acc += inc.amount
       return acc
     }, 0)
     let expenseBucketIds = period.expenses.map(exp => exp.bucketId)
-    buckets.forEach(b => {
+    let buckets = period.buckets.map(b => {
+      let bucket = {...b}
       if (expenseBucketIds.includes(b.id)) {
         let total = period.expenses.reduce((acc, exp) => {
           acc += exp.amount
           return acc
         }, 0)
-        b.amount -= total
+        bucket.amount -= total
         balance -= total
       } else {
         balance -= b.amount
       }
+      return bucket
     })
 
     return [...buckets, { id: -1, name: 'UnBudgeted', amount: balance, highlight: true, calculated: true }]
+  }
+
+  calculateIncome (income) {
+    let total = income.reduce((acc, inc) => {
+      acc += inc.amount
+      return acc
+    }, 0)
+
+    return [...income, {id: -1, name: 'Total', amount: total, highlight: true, calculated: true}]
   }
 
   renderPayPeriodTabs () {
@@ -95,7 +105,7 @@ export default class BudgetTemplate extends React.Component {
         <h2>Income
           <button className="btn btn-action btn-sm btn-success-outline ml-2"><Icon icon='add' style={{width: '20px', verticalAlign: 'middle'}}/></button>
         </h2>
-        <MoneyList items={period.income} edit={true}/>
+        <MoneyList items={this.calculateIncome(period.income)} edit={true}/>
       </div>
       <div className="budget-template__income mb-5">
         <h2>Expenses

@@ -14,7 +14,9 @@ export default class Homepage extends React.Component {
       </div>
       <div className="default-action-buttons columns">
         <div className="column col-6 text-center">
-          <button className="btn btn-lg btn-success-outline">Save to<br/>Buckets</button>
+          <button onClick={() => this.props.navigate('savings_buckets')} className="btn btn-lg btn-success-outline">
+            Save to<br/>Buckets
+          </button>
         </div>
         <div className="column col-6 text-center">
           <button onClick={() => this.props.navigate('budget_template')} className="btn btn-lg btn-warning-4">

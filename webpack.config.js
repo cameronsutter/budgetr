@@ -37,7 +37,7 @@ const config = {
 		new CleanWebpackPlugin([distPath])
 	],
 	devServer: {
-		host: '0.0.0.0',
+		host: 'localhost',
 		disableHostCheck: true,
 		port: 5151,
 		contentBase: './public',

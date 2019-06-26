@@ -21,8 +21,10 @@ export default class MoneyList extends React.Component {
     if (this.props.edit && !item.calculated) {
       klasses = 'money-text pl-2'
       iconStyle['verticalAlign'] = 'sub'
-      el = <input type="number" defaultValue={amount} size="5" className="money-input" onChange={(val) => this.props.changeValue(item.id, val)}/>
+      let inputKlasses = amount < 0 ? 'money-input red-text' : 'money-input'
+      el = <input type="number" defaultValue={amount} size="5" className={inputKlasses} onChange={(val) => this.props.changeValue(item.id, val)}/>
     }
+    if (amount < 0) klasses = `${klasses} red-text`
     return <div key="amount" className="column col-4">
       <Icon icon='dollar-sign' style={iconStyle}/><span className={klasses}>{el}</span>
     </div>

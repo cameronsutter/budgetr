@@ -17,6 +17,18 @@ body {
   font-size: $font-5;
 }
 
+.red-text {
+  color: $error-2;
+}
+
+.black-text {
+  color: $gray-0;
+}
+
+.gray-border {
+  border: 2px solid $gray-7;
+}
+
 h1 {
   font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
@@ -89,8 +101,4 @@ h4 {
   h3 {
     font-size: $font-3;
   }
-}
-
-.gray-border {
-  border: 2px solid $gray-7;
 }

@@ -1,78 +1,95 @@
 {
-  "userId": "",
-  "currentPayPeriods": [
-    {
-      "id": 1,
-      "income": [
-        {
-          "id": 1,
-          "name": "",
-          "amount": 123
+  "userId": "puy9o0PHDpe8Ei4LnwIqXMeqqsu1",
+  "ui": {},
+  "entities": {
+    "payPeriods": {
+      "byId": {
+        "pp1": {
+          "id": "pp1",
+          "current": true,
+          "transactionIds": ["t1"],
+          "incomes": [],
+          "expenses": [],
+          "categoryIds": ["c1"]
         }
-      ],
-      "expenses": [
-        {
-          "id": 1,
-          "name": "",
-          "amount": 123,
-          "date": 123456,
-          "bucketId": 1
-        }
-      ],
-      "buckets": [
-        {
-          "id": 1,
+      },
+      "allIds": ["pp1"]
+    },
+    "categories": {
+      "byId": {
+        "c1": {
+          "id": "c1",
           "name": "",
           "total": 123,
           "current": 111
         }
-      ]
-    }
-  ],
-  "payPeriodTemplates": [
-    {
-      "id": 1,
-      "start": 15,
-      "end": 31,
-      "active": true,
-      "income": [
-        {
-          "id": 1,
+      },
+      "allIds": ["c1"]
+    },
+    "payPeriodTemplates": {
+      "byId": {
+        "ppt1": {
+          "id": "ppt1",
+          "start": 15,
+          "end": 31,
+          "active": true,
+          "incomeTemplateIds": ["it1"],
+          "bucketIds": ["ct1"]
+        }
+      },
+      "allIds": ["ppt1"]
+    },
+    "incomeTemplates": {
+      "byId": {
+        "it1": {
+          "id": "it1",
           "name": "",
           "amount": 123
         }
-      ],
-      "expenses": [
-        {
-          "id": 1,
-          "name": "",
-          "amount": 123,
-          "bucketId": 1
-        }
-      ],
-      "buckets": [
-        {
-          "id": 1,
+      },
+      "allIds": ["it1"]
+    },
+    "categoryTemplates": {
+      "byId": {
+        "ct1": {
+          "id": "it1",
           "name": "",
           "amount": 123
         }
-      ]
+      },
+      "allIds": ["ct1"]
+    },
+    "savingsBuckets": {
+      "byId": {
+        "sb1": {
+          "id": "sb1",
+          "name": "",
+          "amount": 123
+        }
+      },
+      "allIds": ["sb1"]
+    },
+    "transactions": {
+      "byId": {
+        "t1": {
+          "id": "t1",
+          "payPeriodId": "pp1",
+          "date": 123456,
+          "from": "x.y.z",
+          "to": "a.b.c",
+          "amount": 123
+        }
+      },
+      "byFroms": {
+        "x.y.z": ["t1"]
+      },
+      "byTos": {
+        "a.b.c": ["t1"]
+      },
+      "byPayPeriods": {
+        "pp1": ["t1"]
+      },
+      "allIds": ["t1"]
     }
-  ],
-  "savingsBuckets": [
-    {
-      "id": 1,
-      "name": "",
-      "amount": ""
-    }
-  ],
-  "transactions": [
-    {
-      "id": 1,
-      "date": 123456,
-      "from": "x.y.z",
-      "to": "a.b.c",
-      "amount": 123
-    }
-  ]
+  }
 }
