@@ -1,0 +1,2 @@
+export const SAVE_TO_BUCKET = 'SAVE_TO_BUCKET'
+export const CREATE_BUCKET = 'CREATE_BUCKET'

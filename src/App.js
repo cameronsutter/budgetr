@@ -5,8 +5,8 @@ import Homepage from './components/homepage'
 import BudgetTemplate from './components/budget_template'
 import SavingsBuckets from './components/savings_buckets'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-import { firebase, uiConfig, storageRef, budgetRef } from './util/firebase'
-import axios from 'axios';
+import { firebase, uiConfig, downloadBudgetData } from './util/firebase'
+import { create, setIds } from './store/create'
 
 export default class App extends React.Component {
   constructor (props) {
@@ -14,21 +14,20 @@ export default class App extends React.Component {
     this.state = {
       showSidebar: false, 
       page: '/', 
-      isSignedIn: false, 
+      isSignedIn: false,
       userId: null,
-      budgetData: null
+      store: null,
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     // Listen to the Firebase Auth state and set the local state.
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(user => {
       this.setState({isSignedIn: !!user, userId: user.uid})
 
-      // download the user's data
-      budgetRef(user.uid).getDownloadURL().then(async url => {
-        let resp = await axios.get(url)
-        this.setState({budgetData: resp.data})
+      downloadBudgetData(user.uid, (data) => {
+        setIds(data.entities)
+        this.setState({store: create(data)})
       })
     })
   }
@@ -83,44 +82,3 @@ export default class App extends React.Component {
   }
 }
 
-// export default function App() {
-//   let initialState = defaultVars
-//   if (localStorage.getItem(KEY)) initialState = JSON.parse(localStorage.getItem(KEY))
-//   const [vals, setVals] = useState(initialState)
-//   const [hidden, setHidden] = useState(true)
-
-//   const [colorPalette, publishColorPalette] = useState()
-//   const [textPalette, publishTextPalette] = useState()
-//   const [spacingPalette, publishSpacingPalette] = useState()
-
-//   useEffect(() => {
-//     document.body.style.color = vals[FIRST_NEUTRAL]
-//   }, [vals])
-
-//   useEffect(() => {
-//     localStorage.setItem(KEY, JSON.stringify(vals))
-//   }, [vals])
-
-//   function download () {
-//     setHidden(false)
-//     let el = document.getElementById('forPrint')
-//     let printer = html2pdf().from(el)
-//     printer.set(printOptions())
-//     printer.save('project_palette.pdf')
-//     setTimeout(() => setHidden(true), 500)
-//   }
-
-//   function setValues (values) {
-//     let newValues = Object.keys(vals).reduce((acc, v) => {
-//       acc[v] = values[v] || vals[v]
-//       return acc
-//     }, {})
-//     setVals(newValues)
-//   }
-
-//   return (
-//     <CustomProperties properties={vals}>
-      
-//     </CustomProperties>
-//   )
-// }

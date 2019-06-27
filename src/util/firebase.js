@@ -1,3 +1,4 @@
+import axios from 'axios'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/storage'
@@ -17,7 +18,9 @@ firebase.auth(app)
 export {firebase}
 
 let userStorageRef
+let userId
 export function storageRef (uid) {
+  userId = uid
   if (userStorageRef) return userStorageRef
 
   userStorageRef = firebase.storage().ref().child(`user/${uid}`)
@@ -47,4 +50,15 @@ export const uiConfig = {
     // Avoid redirects after sign-in.
     signInSuccessWithAuthResult: () => false
   }
+}
+
+export function downloadBudgetData (uid, callback) {
+  budgetRef(uid).getDownloadURL().then(async url => {
+    let resp = await axios.get(url)
+    callback(resp.data)
+  })
+}
+
+export function uploadBudgetData (jsonData) {
+  budgetRef(userId).putString(JSON.stringify(jsonData))
 }
