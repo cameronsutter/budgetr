@@ -77,7 +77,8 @@
           "date": 123456,
           "from": "x.y.z",
           "to": "a.b.c",
-          "amount": 123
+          "amount": 123,
+          "note": ""
         }
       },
       "byFroms": {
